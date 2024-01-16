@@ -1,13 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Republic Day,2024</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>  
-    <h1>Republic Day</h1>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/Header.png" alt="RepublicDayHeader" />
+
+      <button class="guide-button" onclick="showDialog()">
+        <img src="./assets/img/Guide-Button.png" alt="guide-button" />
+      </button>
+      <dialog id="modal">
+        <div class="howToPlay">
+          <div class="guide-banner"></div>
+          <div style="margin-top: 8vw">
+            <h1 style="font-size: 4vw; text-align: center; margin: 0">
+              How to Play
+            </h1>
+            <ul>
+              <li>
+                1.)Top 12 Dancers, 12 Singers and 6 Fashion talents have to
+                register their ids with SK employees to participate in this
+                event.
+              </li>
+              <li>2.) Pk Battle will be held on Republic Day.</li>
+              <li>
+                3.) dancers and singers’ talents must wear tricolor outfits and
+                need to perform patriotic (deshbhakt) performances on this
+                special Republic Day.
+              </li>
+              <li>
+                4.) For fashion battle talents need to wear costumes according
+                to Republic Day.
+              </li>
+              <li>
+                5.) PK match will be held between the talents from same
+                category, Dancer go against dancer, Singers go against singer,
+                Fashion go against fashion.
+              </li>
+              <li>
+                6.) Talents need to come live 15 min before the PK Battle, there
+                will be a 15-min official PK match scheduled for the event.
+              </li>
+              <li>
+                7.)First Talent to the left on the webpage schedule, will start
+                the performance first and will perform for first 5 – 6 Min, then
+                next talent will perform for 5 – 6 Min.
+              </li>
+              <li>
+                8.) Will have 1 winner from each category (Dancing, Singing &
+                Fashion) based on maximum beans received in the event will be
+                mentioned in the BANNER for 3 days.
+              </li>
+              <li>
+                9.) Talents and User will be ranked on the leaderboard based on
+                the maximum beans received and spent respectively in the event.
+              </li>
+              <li>
+                10.) Talent ranking will be separate for each category. 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="close" onclick="closeDialog()">
+          <img src="./assets/img/close-button.png" alt="close" />
+        </button>
+      </dialog>
+    </header>
+
+    <main>
+      <!-- Rewards section -->
+      <section class="tab-btns-section">
+        <!-- User and Tab buttons -->
+        <div class="tab-btns">
+          <button class="user active tab"></button>
+          <button class="talent tab"></button>
+        </div>
+
+        <div class="tab-content active">
+          <div data-current="0" class="rewards">
+            <div class="reward-banner">
+
+            </div>
+            <div class="reward-top reward-top1">
+                <span>TOP 1</span>
+                <img src="./assets/img/rank display.png" alt="">
+              </div>
+            <button class="arrow left">
+              <img src="./assets/img/Left.png" alt="left-arrow" />
+            </button>
+
+            <div class="prizes-1 active">
+              <div class="stage">
+                <img src="./assets/img/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/img/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/img/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/img/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/img/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+
+            <button class="arrow right">
+              <img src="./assets/img/Right.png" alt="right-arrow" />
+            </button>
+
+            <p class="reward-text">User recieves total 25% of the beans pot.</p>
+          </div>
+        </div>
+
+        <div class="tab-content">
+          <div data-current="0" class="rewards talent-rewards r1 active">
+            <div class="reward-banner">
+
+            </div>
+            <div style="color: brown; font-weight: 600; text-wrap: nowrap;" id="reward-top1" class="reward-top reward-top1">
+              <span>10 Million & Above Gems</span>
+            </div>
+
+            <button class="arrow left left-1">
+              <img src="./assets/img/Left.png" alt="left-arrow" />
+            </button>
+
+            <div class="prizesR1 active">
+              <div style="width:18vw" class="stage stage1">
+                <img src="./assets/img/PK super star Frame.png" alt="beans-pot" />
+                <img src="./assets/img/PK battle Sudio room.png" alt="beans-pot" />
+                <img src="./assets/img/PK-Battle-badge@300.png" alt="battle-badge">
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage stage1">
+                <img src="./assets/img/PK super star Frame.png" alt="beans-pot" />
+                <img src="./assets/img/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage stage1">
+                <img src="./assets/img/PK super star Frame.png" alt="beans-pot" />
+                <img src="./assets/img/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage">
+                <img src="./assets/img/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+
+            <button class="arrow right right-1">
+              <img src="./assets/img/Right.png" alt="right-arrow" />
+            </button>
+
+            <p style="text-align: center;" class="reward-text reward-text-1">
+              15 days PK STAR BADGE + Audio theme of PK combat + PK SUperStar Profile Frame
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Schedule section -->
+      <section class="schedule-table">
+
+        <!-- Schedule tabs -->
+        <div class="tab-btns-schedule">
+          <button class="dancing active tab1 tab2"></button>
+          <button class="singing tab1 tab2"></button>
+          <button class="fashion  tab1 tab2"></button>
+        </div>
+
+        <!-- Schedule content-->
+        <div class="talent-rewards2" style="position: relative; margin-top:15vw;">
+          <img src="./assets/img/Schedule banner.png" alt="schedule-banner" class="schedule-banner">
+          <div  class="dancingR1 schedule-contentR1 schedule-bg active ">
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit"> 𝐉𝐀𝐀𝐍𝐔 💋 </span>
+                </span>
+                <br />
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">ID: </span>
+                </span>
+                <a href="http://www.kktv1.com/m/?roomid=644707786">
+                  <span style="vertical-align: inherit">
+                    <span style="vertical-align: inherit"> 644707786 </span>
+                  </span>
+                </a>
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <span style="vertical-align: inherit"
+                  ><span style="vertical-align: inherit">Aliya❤❤❤ </span></span
+                ><br /><span style="vertical-align: inherit"
+                  ><span style="vertical-align: inherit">ID: </span></span
+                ><a href="http://www.kktv1.com/m/?roomid=584260474"
+                  ><span style="vertical-align: inherit"
+                    ><span style="vertical-align: inherit"
+                      >584260474</span
+                    ></span
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >22:00-22:15 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <div class="singingR1 schedule-bg">
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> Ooru💫 </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=633310564"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >633310564</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >🎵 ⃢🎸ᴠɪʀᴀᴊ™?✔️
+                  </font></font
+                ><br /><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=561580330"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >561580330</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >22:15-22:30 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> ❤️ GEET ❤️ </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=645012812"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >645012812</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >🎸Siya Singh 🎸🙂
+                  </font></font
+                ><br /><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=628264282"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >628264282</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >22:30-22:45 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> 🥰🥰PiHu🥰🥰 </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=646736502"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >646736502
+                    </font></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">
+                    🦋⃟✮⃝🇲u̷s̷k̷a̷n̷𝄟⃝)
+                  </font></font
+                ><br /><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=623248845"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >623248845</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >22:45-23:00 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> PARI ❤️❤️</font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font>
+                </font>
+                <a href="http://www.kktv1.com/m/?roomid=644729261">
+                  <font style="vertical-align: inherit">
+                    <font style="vertical-align: inherit"> 644729261 </font>
+                  </font>
+                </a>
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">
+                    🎤SiNGER💫FAiZAAL🎤
+                  </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font>
+                </font>
+                <a href="http://www.kktv1.com/m/?roomid=631658884">
+                  <font style="vertical-align: inherit">
+                    <font style="vertical-align: inherit"> 631658884 </font>
+                  </font>
+                </a>
+              </div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> 23:00-23:15 IST </font>
+                </font>
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> shweta gupta 🦋 </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=630758906"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >630758906</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">🎤 DILNASHI ❤️</font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font>
+                </font>
+                <a href="http://www.kktv1.com/m/?roomid=605371677">
+                  <font style="vertical-align: inherit">
+                    <font style="vertical-align: inherit">605371677</font>
+                  </font>
+                </a>
+              </div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">23:15-23:30 IST</font>
+                </font>
+              </div>
+            </div>
+          </div>
+
+          <div class="fashionR1 schedule-bg ">
+            
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">💞S᭄ꦿ🦋⟫Ⅾ𝐡ŕìì💗</span>
+                </span>
+                <br />
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">ID: </span></span
+                ><a href="http://www.kktv1.com/m/?roomid=616703356"
+                  ><span style="vertical-align: inherit"
+                    ><span style="vertical-align: inherit"
+                      >616703356</span
+                    ></span
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <span style="vertical-align: inherit"
+                  ><span style="vertical-align: inherit"
+                    >cutepie 😚
+                  </span></span
+                ><br /><span style="vertical-align: inherit"
+                  ><span style="vertical-align: inherit">ID: </span></span
+                ><a href="http://www.kktv1.com/m/?roomid= 646160860"
+                  ><span style="vertical-align: inherit"
+                    ><span style="vertical-align: inherit">
+                      646160860</span
+                    ></span
+                  ></a
+                >
+              </div>
+              <div>
+                <span style="vertical-align: inherit"
+                  ><span style="vertical-align: inherit"
+                    >21:15-21:30 IST</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit"> PATHE </font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=631104396"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >631104396</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">janviG </font></font
+                ><br /><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=642203798"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >642203798</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >21:30-21:45 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+            <div id="table-data">
+              <div class="date">25/12/2023</div>
+              <div>
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">💞♣᭄🍒™?️ Heer🏝️</font>
+                </font>
+                <br />
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=597903766"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >597903766</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <img class="vs" src="./img/VS.png" />
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">🅼🅾🅽🅸🆂🅷🅰🕉️ </font></font
+                ><br /><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">ID: </font></font
+                ><a href="http://www.kktv1.com/m/?roomid=557831534"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >557831534</font
+                    ></font
+                  ></a
+                >
+              </div>
+              <div>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >21:45-22:00 IST</font
+                  ></font
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
