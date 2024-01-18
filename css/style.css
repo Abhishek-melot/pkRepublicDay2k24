@@ -362,3 +362,10 @@ a{
     text-decoration: none;
     color: #fff;
 }
+
+.vs {
+    max-width: 5vw;
+  }
+  .vs img {
+    width: 100%;
+  }
