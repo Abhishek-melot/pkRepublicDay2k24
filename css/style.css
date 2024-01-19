@@ -177,9 +177,9 @@ body {
   align-items: center;
   width: 85%;
   justify-content: space-between;
-  padding: 0 8vw;
+  padding: 15vw 8vw;
   position: relative;
-  min-height: 60vh;
+  /* min-height: 60vh; */
   margin-top: 20px;
 }
 .arrow {
